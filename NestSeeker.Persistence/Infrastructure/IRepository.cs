@@ -13,5 +13,7 @@ namespace NestSeeker.Persistence.Infrastructure
         T FirstOrDefault(Expression<Func<T, bool>> predicate);
         void Add(T entity);
         void Remove(T entity);
+        void Update(T entity);
+       
     }
 }
