@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Linq.Expressions;
 using System.Linq;
+using NestSeeker.Data.Model;
 
 namespace NestSeeker.Persistence.Infrastructure
 {
@@ -37,6 +38,11 @@ namespace NestSeeker.Persistence.Infrastructure
             return this._context.Set<T>();
         }
 
+        public void Add(Microsoft.EntityFrameworkCore.Metadata.Internal.Property property)
+        {
+            throw new NotImplementedException();
+        }
+
         public T GetById(int id)
         {
             return this._context.Set<T>().Find(id);
@@ -47,7 +53,15 @@ namespace NestSeeker.Persistence.Infrastructure
             this._context.Set<T>().Remove(entity);
         }
 
+        public void Remove(Microsoft.EntityFrameworkCore.Metadata.Internal.Property property)
+        {
+            throw new NotImplementedException();
+        }
 
+        public void Remove(User user)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
 
