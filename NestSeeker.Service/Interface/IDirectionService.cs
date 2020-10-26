@@ -7,7 +7,7 @@ namespace NestSeeker.Service.Interface
 {
    public interface IDirectionService
     {
-        IEnumerable<Direction> GetAllUser();
+        IEnumerable<Direction> GetAllDirection();
         Direction GetById(int id);
         Direction AddDirection(Direction direction);
     }

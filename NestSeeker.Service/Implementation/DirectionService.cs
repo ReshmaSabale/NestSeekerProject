@@ -1,4 +1,5 @@
 ﻿using NestSeeker.Data.Model;
+using NestSeeker.Persistence.Infrastructure;
 using NestSeeker.Service.Interface;
 using System;
 using System.Collections.Generic;
@@ -8,19 +9,29 @@ namespace NestSeeker.Service.Implementation
 {
     public class DirectionService : IDirectionService
     {
-        public Direction AddDirection(Direction direction)
+        private readonly IUnitOfWork _unitOfWork;
+        public DirectionService(IUnitOfWork unitOfWork) // Constructor Injection
         {
-            throw new NotImplementedException();
+            this._unitOfWork = unitOfWork;
         }
 
-        public IEnumerable<Direction> GetAllUser()
+        public Direction AddDirection(Direction direction)
         {
-            throw new NotImplementedException();
+            this._unitOfWork.DirectionRepository.Add(direction);
+            this._unitOfWork.Save();
+            return direction;
+
+        }
+
+        public IEnumerable<Direction> GetAllDirection()
+        {
+            return this._unitOfWork.DirectionRepository.GetAll();
         }
 
         public Direction GetById(int id)
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
+            return this._unitOfWork.DirectionRepository.GetById(id);
         }
     }
 }

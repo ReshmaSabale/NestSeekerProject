@@ -19,10 +19,10 @@ namespace NestSeeker.Web.Controllers
             this._propertyService = propertyService;
         }
         [HttpGet("GetAllProperties")]
-        public IActionResult GetAllUsers()
+        public IActionResult GetAllProperty()
         {
             //UserService service = new UserService();
-            return Ok(_propertyService.GetAllUser());
+            return Ok(_propertyService.GetAllProperty());
         }
         [HttpPost("addproperty")]
         public IActionResult AddProperty(Property property)

@@ -7,8 +7,10 @@ namespace NestSeeker.Service.Interface
 {
    public interface IStatusService
     {
-        IEnumerable<Status> GetAllUser();
+        IEnumerable<Status> GetAllStatus();
+        
         Status GetById(int id);
         Status AddStatus(Status status);
+       
     }
 }

@@ -20,15 +20,7 @@ namespace NestSeeker.Persistence.Infrastructure
         public Repository<Direction> DirectionRepository { get; }
         public Repository<BHKType> BHKTypeRepository { get; }
         public Repository<Document> DocumentRepository { get; }
-
-        //Repository<Property> IUnitOfWork.PropertyRepository => throw new NotImplementedException();
-
         public Repository<Property> PropertyRepository { get; }
-
-        //Repository<User> IUnitOfWork.PropertyRepository => throw new NotImplementedException();
-
-        // Repository<User> IUnitOfWork.UserRepository => throw new NotImplementedException();
-
         public UnitOfWork(NestSeekerContext context)
         {
             this._context = context;

@@ -11,24 +11,24 @@ namespace NestSeeker.Web.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class StatusController : ControllerBase
+    public class BHKTypeController : ControllerBase
     {
-        private readonly IStatusService _statusService;
-        public StatusController(IStatusService statusService)
+        private readonly IBHKTypeService _bhktypeService;
+        public BHKTypeController(IBHKTypeService bhktypeService)
         {
-            this._statusService = statusService;
+            this._bhktypeService = bhktypeService;
         }
         [HttpGet("GetAllProperties")]
-        public IActionResult GetAllStatus()
+        public IActionResult GetAllBHKTypes()
         {
             //UserService service = new UserService();
-            return Ok(_statusService.GetAllStatus());
+            return Ok(_bhktypeService.GetAllBHKTypes());
         }
-        [HttpPost("addstatus")]
-        public IActionResult AddStatus(Status status)
+        [HttpPost("addbhktype")]
+        public IActionResult AddBHKType(BHKType bhktype)
         {
             //UserService service = new UserService();
-            return Ok(_statusService.AddStatus(status));
+            return Ok(_bhktypeService.AddBHKType(bhktype));
         }
 
     }

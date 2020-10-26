@@ -15,7 +15,7 @@ namespace NestSeeker.Service.Implementation
             this._unitOfWork = unitOfWork;
         }
        
-        public IEnumerable<Property> GetAllUser()
+        public IEnumerable<Property> GetAllProperty()
         {
             return (IEnumerable<Property>)this._unitOfWork.PropertyRepository.GetAll();
         }

@@ -22,16 +22,19 @@ namespace NestSeeker.Service.Implementation
             return status;
         }
 
-        public IEnumerable<Status> GetAllUser()
+        public IEnumerable<Status> GetAllStatus()
         {
             //throw new NotImplementedException();
             return this._unitOfWork.StatusRepository.GetAll();
         }
 
+        
         public Status GetById(int id)
         {
             // throw new NotImplementedException();
             return this._unitOfWork.StatusRepository.GetById(id);
         }
+
+       
     }
 }

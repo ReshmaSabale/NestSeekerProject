@@ -11,25 +11,26 @@ namespace NestSeeker.Web.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class StatusController : ControllerBase
+    public class MyFavouriteController : ControllerBase
     {
-        private readonly IStatusService _statusService;
-        public StatusController(IStatusService statusService)
+
+
+        private readonly IMyFavouriteService _favouriteService;
+        public MyFavouriteController(IMyFavouriteService favouriteService)
         {
-            this._statusService = statusService;
+            this._favouriteService = favouriteService;
         }
         [HttpGet("GetAllProperties")]
-        public IActionResult GetAllStatus()
+        public IActionResult GetAllMyFavourites()
         {
             //UserService service = new UserService();
-            return Ok(_statusService.GetAllStatus());
+            return Ok(_favouriteService.GetAllMyFavourites());
         }
-        [HttpPost("addstatus")]
-        public IActionResult AddStatus(Status status)
+        [HttpPost("addfavourites")]
+        public IActionResult AddFavourite(MyFavourites myFavourites)
         {
             //UserService service = new UserService();
-            return Ok(_statusService.AddStatus(status));
+            return Ok(_favouriteService.AddFavourite(myFavourites));
         }
-
     }
 }

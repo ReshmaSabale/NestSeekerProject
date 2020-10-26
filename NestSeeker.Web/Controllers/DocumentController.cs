@@ -11,25 +11,24 @@ namespace NestSeeker.Web.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class StatusController : ControllerBase
+    public class DocumentController : ControllerBase
     {
-        private readonly IStatusService _statusService;
-        public StatusController(IStatusService statusService)
+        private readonly IDocumentService _documentService;
+        public DocumentController(IDocumentService documentService)
         {
-            this._statusService = statusService;
+            this._documentService = documentService;
         }
         [HttpGet("GetAllProperties")]
-        public IActionResult GetAllStatus()
+        public IActionResult GetAllDocuments()
         {
             //UserService service = new UserService();
-            return Ok(_statusService.GetAllStatus());
+            return Ok(_documentService.GetAllDocuments());
         }
-        [HttpPost("addstatus")]
-        public IActionResult AddStatus(Status status)
+        [HttpPost("adddocument")]
+        public IActionResult AddDocument(Document document)
         {
             //UserService service = new UserService();
-            return Ok(_statusService.AddStatus(status));
+            return Ok(_documentService.AddDocument(document));
         }
-
     }
 }

@@ -7,7 +7,7 @@ namespace NestSeeker.Service.Interface
 {
     public interface IPropertyService
     {
-        IEnumerable<Property> GetAllUser();
+        IEnumerable<Property> GetAllProperty();
         Property GetById(int id);
         Property AddProperty(Property property);
       //  Property UpdateProperty(Property property);
