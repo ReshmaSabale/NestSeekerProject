@@ -33,12 +33,14 @@ namespace NestSeeker.Web.Controllers
             //UserService service = new UserService();
             return Ok(_userService.AddUser(user));
         }
+
         [HttpPut("updateuser")]
         public IActionResult UpdateUser(User user)
         {
             //UserService service = new UserService();
             return Ok(_userService.UpdateUser(user));
         }
+
         [HttpPut("deleteuser/{userId}")]
         public IActionResult DeleteUser(int userId)
         {

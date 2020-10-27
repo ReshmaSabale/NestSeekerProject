@@ -39,25 +39,26 @@ namespace NestSeeker.Service.Implementation
             throw new NotImplementedException();
             //return _unitOfWork.PropertyRepository.GetById(id);
         }
+
         /* public bool DeleteProperty(int propertyId)
-{
-    Property property = this._unitOfWork.PropertyRepository.GetById(propertyId);
-    if (property != null)
-    {
-        this._unitOfWork.UserRepository.Remove(property);
-        this._unitOfWork.Save();
-        return true;
-    }
-    return false;
-}
+        {
+             Property property = this._unitOfWork.PropertyRepository.GetById(propertyId);
+             if (property != null)
+             {
+                    this._unitOfWork.UserRepository.Remove(property);
+                    this._unitOfWork.Save();
+                return true;
+              }
+            return false;
+        }
 
-/* public Property UpdateProperty(Property property)
-{
-    this._unitOfWork.UserRepository.Update(property);
-    this._unitOfWork.Save();
-    return property;
+        /* public Property UpdateProperty(Property property)
+        {
+            this._unitOfWork.UserRepository.Update(property);
+            this._unitOfWork.Save();
+            return property;
 
-}*/
+        }*/
 
 
     }

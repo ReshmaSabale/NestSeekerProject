@@ -8,7 +8,6 @@ namespace NestSeeker.Service.Interface
     public interface IDocumentService
     {
         IEnumerable<Document> GetAllDocuments();
-
         Document GetById(int id);
         Document AddDocument(Document document);
     }

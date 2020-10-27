@@ -26,7 +26,6 @@ namespace NestSeeker.Service.Implementation
             return this._unitOfWork.ProprtyTypeRepository.GetById(id);
         }
        
-       
         public PropertyType AddProperty(PropertyType propertytype)
         {
             // throw new NotImplementedException();

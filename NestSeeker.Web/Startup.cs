@@ -14,6 +14,8 @@ using NestSeeker.Data.Model;
 using NestSeeker.Persistence;
 using NestSeeker.Persistence.Infrastructure;
 using NestSeeker.Service;
+using NestSeeker.Service.Implementation;
+using NestSeeker.Service.Interface;
 
 namespace NestSeeker.Web
 {
@@ -34,6 +36,20 @@ namespace NestSeeker.Web
         {
             services.AddControllers();
             services.AddTransient<IUserService,UserService>();
+
+            services.AddTransient<IBHKTypeService, BHKTypeService>();
+            services.AddTransient<IDirectionService, DirectionService>();
+            services.AddTransient<IDocumentService, DocumentService>();
+            services.AddTransient<IMyFavouriteService, MyFavouriteService>();
+            services.AddTransient<IPropertyService, PropertyService>();
+            services.AddTransient<IPropertyTypeService, PropertyTypeService>();
+            services.AddTransient<IRequestService, RequestService>();
+            services.AddTransient<IRoleService, RoleService>();
+            services.AddTransient<IStatusService, StatusService>();
+            services.AddTransient<ITransactionTypeService, TransactionTypeService>();
+            services.AddTransient<IUserRoleService, UserRoleService>();
+
+
             services.AddTransient<NestSeekerContext>();
 
             services.AddTransient<IUnitOfWork, UnitOfWork>(); //RP

@@ -18,12 +18,14 @@ namespace NestSeeker.Web.Controllers
         {
             this._statusService = statusService;
         }
+
         [HttpGet("GetAllProperties")]
         public IActionResult GetAllStatus()
         {
             //UserService service = new UserService();
             return Ok(_statusService.GetAllStatus());
         }
+
         [HttpPost("addstatus")]
         public IActionResult AddStatus(Status status)
         {

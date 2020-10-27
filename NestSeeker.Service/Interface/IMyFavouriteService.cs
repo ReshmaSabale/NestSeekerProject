@@ -8,7 +8,6 @@ namespace NestSeeker.Service.Interface
     public interface IMyFavouriteService
     {
         IEnumerable<MyFavourites> GetAllMyFavourites();
-
         MyFavourites GetById(int id);
         MyFavourites AddFavourite(MyFavourites myFavourites);
     }

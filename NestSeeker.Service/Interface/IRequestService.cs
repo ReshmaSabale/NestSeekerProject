@@ -8,7 +8,6 @@ namespace NestSeeker.Service.Interface
    public interface IRequestService
     {
         IEnumerable<Requests> GetAllRequests();
-
         Requests GetById(int id);
         Requests AddRequest(Requests requests);
     }

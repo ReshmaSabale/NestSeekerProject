@@ -7,7 +7,7 @@ using System.Text;
 
 namespace NestSeeker.Service.Implementation
 {
-    class StatusService : IStatusService
+    public class StatusService : IStatusService
     {
         private readonly IUnitOfWork _unitOfWork;
         public StatusService(IUnitOfWork unitOfWork) // Constructor Injection

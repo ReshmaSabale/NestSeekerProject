@@ -7,7 +7,7 @@ using System.Text;
 
 namespace NestSeeker.Service.Implementation
 {
-    class MyFavouriteService : IMyFavouriteService
+     public class MyFavouriteService : IMyFavouriteService
     {
         private readonly IUnitOfWork _unitOfWork;
         public MyFavouriteService(IUnitOfWork unitOfWork) // Constructor Injection

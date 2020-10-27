@@ -13,8 +13,6 @@ namespace NestSeeker.Web.Controllers
     [ApiController]
     public class MyFavouriteController : ControllerBase
     {
-
-
         private readonly IMyFavouriteService _favouriteService;
         public MyFavouriteController(IMyFavouriteService favouriteService)
         {

@@ -18,12 +18,14 @@ namespace NestSeeker.Web.Controllers
         {
             this._roleService = roleService;
         }
+
         [HttpGet("GetAllProperties")]
         public IActionResult GetAllRoles()
         {
             //UserService service = new UserService();
             return Ok(_roleService.GetAllRoles());
         }
+
         [HttpPost("addrole")]
         public IActionResult AddRole(Role role)
         {

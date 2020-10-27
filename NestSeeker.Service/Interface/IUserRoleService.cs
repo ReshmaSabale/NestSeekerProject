@@ -8,7 +8,6 @@ namespace NestSeeker.Service.Interface
     public interface IUserRoleService
     {
         IEnumerable<UserRole> GetAllUserRole();
-
         UserRole GetById(int id);
     }
 }

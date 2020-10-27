@@ -18,12 +18,14 @@ namespace NestSeeker.Web.Controllers
         {
             this._transactiontypeService = transactiontypeService;
         }
+
         [HttpGet("GetAllProperties")]
         public IActionResult GetAllTransactionType()
         {
             //UserService service = new UserService();
             return Ok(_transactiontypeService.GetAlltransactiontypes());
         }
+
         [HttpPost("addtransactiontype")]
         public IActionResult AddITransactionTypeService(TransactionType transactionType)
         {

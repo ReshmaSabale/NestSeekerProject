@@ -9,7 +9,6 @@ namespace NestSeeker.Service.Interface
     public interface ITransactionTypeService
     {
         IEnumerable<TransactionType> GetAlltransactiontypes();
-
         TransactionType GetById(int id);
         TransactionType AddTransactionType(TransactionType transactionType);
 
