@@ -8,6 +8,7 @@ namespace NestSeeker.Persistence
 {
     public class NestSeekerContext : DbContext
     {
+        public NestSeekerContext(DbContextOptions<NestSeekerContext> options) : base(options) { }// injected from startup class to base class
         public DbSet<User> Users { get; set; }
         public DbSet<UserRole> UserRoles { get; set; }
         public DbSet<Role> Roles { get; set; }
@@ -22,11 +23,11 @@ namespace NestSeeker.Persistence
         public DbSet<Document> Documents { get; set; }
 
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        /*protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            string connectionString = "Data Source=SNEHAL-PC\\SQLEXPRESS02\\MYSQLSERVER;Initial Catalog=NestSeekerDatabase; Integrated Security=True";
+            string connectionString = "Data Source=RM-PC\\MYSQLSERVER;Initial Catalog=NestSeekerDatabase; Integrated Security=True";
             optionsBuilder.UseSqlServer(connectionString);
-        }
+        }*/
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

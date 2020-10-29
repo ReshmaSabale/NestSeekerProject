@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -35,8 +36,10 @@ namespace NestSeeker.Web
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-            services.AddTransient<IUserService,UserService>();
 
+            services.AddDbContext<NestSeekerContext>(options => options.UseSqlServer(Configuration.GetConnectionString("NestSeekerConnectionString"))); //Deployment
+
+            services.AddTransient<IUserService,UserService>();
             services.AddTransient<IBHKTypeService, BHKTypeService>();
             services.AddTransient<IDirectionService, DirectionService>();
             services.AddTransient<IDocumentService, DocumentService>();
